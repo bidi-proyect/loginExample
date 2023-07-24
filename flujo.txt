@@ -1,0 +1,27 @@
+El usuario accede a la ruta de registro (signup) en la aplicación y proporciona su información, como nombre de usuario, correo electrónico y contraseña.
+
+El cliente (frontend) envía los datos del nuevo usuario al backend (Spring Boot) a través de una solicitud POST.
+
+En el backend, se valida y procesa la información del usuario recibida en la solicitud.
+
+Se crea un registro temporal de usuario en la base de datos con la información proporcionada, pero con un estado de "no confirmado". Además, se genera un OTP aleatorio y único y se asocia al usuario en la base de datos.
+
+Se envía el OTP al usuario registrado. Puedes enviarlo a través de correo electrónico, SMS o cualquier otro medio seguro.
+
+El usuario ingresa el OTP recibido en la interfaz de la aplicación.
+
+El cliente (frontend) envía el OTP ingresado al backend para su verificación.
+
+En el backend, se verifica si el OTP ingresado coincide con el OTP asociado al usuario registrado en la base de datos. Si el OTP es válido y no ha expirado, se actualiza el estado del usuario a "confirmado" y se guardan sus datos en la base de datos como un registro de usuario completo.
+
+Una vez que el registro ha sido confirmado, se puede generar un token JWT que contiene la información de autenticación del usuario, como el ID de usuario.
+
+El token JWT se devuelve al cliente como respuesta a la solicitud de registro (signup) confirmado.
+
+El cliente almacena el token JWT localmente (por ejemplo, en las cookies o en el almacenamiento local del navegador) para utilizarlo en futuras solicitudes.
+
+El usuario ahora está registrado y autenticado en la aplicación y puede acceder a las rutas protegidas por Spring Security utilizando el token JWT en sus solicitudes.
+
+Es importante tener en cuenta que, en este flujo, el registro del usuario se completa solo después de que el OTP ha sido verificado correctamente. Hasta que el usuario complete el proceso de confirmación con el OTP, su registro estará en un estado provisional o "no confirmado". Esto permite asegurarse de que solo los usuarios con acceso al correo electrónico o número de teléfono vinculado a la cuenta puedan completar el registro. Además, se puede implementar una lógica para eliminar los registros no confirmados después de un tiempo determinado para mantener la base de datos limpia.
+
+Espero que este flujo te ayude a implementar la confirmación del registro del usuario mediante OTP de manera segura en tu aplicación. Recuerda ajustar los detalles según los requisitos específicos de tu proyecto y considerar aspectos de seguridad adicionales para proteger la información sensible del usuario durante todo el proceso.
