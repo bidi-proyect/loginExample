@@ -1,5 +1,5 @@
 package com.login.loginExample.user.infrastructure.entrypoint.service;
-
+/*
 
 import com.login.loginExample.user.domain.entity.User;
 import com.login.loginExample.user.infrastructure.entrypoint.repository.IUserRepository;
@@ -24,3 +24,5 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return UserDetailsImpl.build(user);
     }
 }
+
+ */

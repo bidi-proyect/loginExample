@@ -1,5 +1,5 @@
 package com.login.loginExample.user.infrastructure.entrypoint.controller;
-
+/*
 import com.login.loginExample.user.domain.service.IOtpService;
 import com.login.loginExample.user.infrastructure.entrypoint.dto.request.OtpRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,3 +22,5 @@ public class OtpController {
         return iOtpService.sendCode(otpRequest.getPhoneNumber());
     }
 }
+
+ */

@@ -1,5 +1,5 @@
 package com.login.loginExample.user.infrastructure.entrypoint.security.config;
-
+/*
 
 import com.login.loginExample.user.infrastructure.entrypoint.security.jwt.AuthTokenFilter;
 import com.login.loginExample.user.infrastructure.entrypoint.security.jwt.JwtAuthEntrypoint;
@@ -76,3 +76,5 @@ public class WebSecurityConfig {
 
 
 }
+
+ */

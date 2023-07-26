@@ -1,5 +1,5 @@
 package com.login.loginExample.user.infrastructure.entrypoint.service;
-
+/*
 import com.login.loginExample.user.application.service.OtpServiceImpl;
 import com.login.loginExample.user.domain.entity.ERole;
 import com.login.loginExample.user.domain.entity.Rol;
@@ -11,7 +11,7 @@ import com.login.loginExample.user.infrastructure.entrypoint.dto.response.JwtRes
 import com.login.loginExample.user.infrastructure.entrypoint.dto.response.MessageResponse;
 import com.login.loginExample.user.infrastructure.entrypoint.mapper.UserMapper;
 import com.login.loginExample.user.infrastructure.entrypoint.repository.IUserRepository;
-import com.login.loginExample.user.infrastructure.entrypoint.security.jwt.JwtUtils;
+
 import com.login.loginExample.user.infrastructure.entrypoint.utils.ValidateRol;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -108,3 +108,5 @@ public class AuthServiceImpl implements AuthService {
     }
 
 }
+
+ */

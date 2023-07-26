@@ -1,5 +1,5 @@
 package com.login.loginExample.user.infrastructure.entrypoint.service;
-
+/*
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.login.loginExample.user.domain.entity.User;
 import org.springframework.security.core.GrantedAuthority;
@@ -91,3 +91,5 @@ public class UserDetailsImpl implements UserDetails {
         return Objects.equals(id, user.id);
     }
 }
+
+ */
