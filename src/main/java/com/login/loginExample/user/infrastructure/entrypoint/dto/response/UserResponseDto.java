@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
+
+
 @Component
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserResponseDto {
@@ -14,6 +17,7 @@ public class UserResponseDto {
     private String email;
     @JsonIgnore
     private String password;
+    private Date createDate;
 
     public long getId() {
         return id;
@@ -53,5 +57,13 @@ public class UserResponseDto {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 }

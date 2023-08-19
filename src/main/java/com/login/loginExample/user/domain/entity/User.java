@@ -2,10 +2,7 @@ package com.login.loginExample.user.domain.entity;
 
 
 import com.fasterxml.jackson.annotation.*;
-
-import java.util.HashSet;
-import java.util.Set;
-
+import java.util.Date;
 import javax.persistence.*;
 
 @Entity
@@ -19,21 +16,12 @@ public class User {
     private String name;
     @Column(name= "LASTNAME")
     private String lastname;
-    @Column (name= "EMAIL", unique = true)
-    private String email;
-    @Column(name= "PHONE_NUMBER", unique = true)
-    private String phoneNumber;
     @Column(name= "PASSWORD")
     private String password;
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "user_roles",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "rol_id"))
-    private Set<Rol> roles = new HashSet<>();
-    @Column(name = "OTP")
-    private String otp;
-    @Column(name = "CONFIRMED")
-    private boolean confirmed;
+    @Column (name= "EMAIL", unique = true)
+    private String email;
+    @Column(name = "CREATEDATE")
+    private Date createDate;
 
     public long getId() {
 		return id;
@@ -67,14 +55,6 @@ public class User {
         this.email = email;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
      public String getPassword() {
          return password;
      }
@@ -83,27 +63,11 @@ public class User {
          this.password = password;
      }
 
-    public Set<Rol> getRoles() {
-        return roles;
+    public Date getCreateDate() {
+        return createDate;
     }
 
-    public void setRoles(Set<Rol> roles) {
-        this.roles = roles;
-    }
-
-    public String getOtp() {
-        return otp;
-    }
-
-    public void setOtp(String otp) {
-        this.otp = otp;
-    }
-
-    public boolean isConfirmed() {
-        return confirmed;
-    }
-
-    public void setConfirmed(boolean confirmed) {
-        this.confirmed = confirmed;
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 }
